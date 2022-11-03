@@ -35,7 +35,7 @@ if ENV == 'dev':
 elif ENV == 'prod':
     app.debug = False
     try:
-        mongo = pymongo.MongoClient(host='mongodb+srv://grayroot:gray100@testcluster1.6majs.mongodb.net/clients?retryWrites=true&w=majority')
+        mongo = pymongo.MongoClient(host='mongodb+srv://admin:gray100@cluster0.ddce2m0.mongodb.net/?retryWrites=true&w=majority')
         mongo.server_info()
         if mongo.server_info():
             print('Successfully connected to the db')
